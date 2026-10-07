@@ -1,8 +1,8 @@
 export const businessInfo = {
   name: "AutoCraft Garage",
   tagline: "Reliable Car Care. Done Right.",
-  phone: "+91 98765 43210",
-  phoneWhatsApp: "919876543210",
+  phone: "+91 1111111111",
+  phoneWhatsApp: "911111111111",
   email: "service@autocraftgarage.com",
   address: "Madhubani Bihar",
   mapEmbedUrl: "..",
