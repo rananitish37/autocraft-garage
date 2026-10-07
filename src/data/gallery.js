@@ -1,0 +1,88 @@
+export const galleryImages = [
+  {
+    id: 1,
+    url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&q=80",
+    alt: "Mechanic working on brake system",
+    category: "Workshop",
+  },
+  {
+    id: 2,
+    url: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80",
+    alt: "Modern car in professional garage",
+    category: "Garage",
+  },
+  {
+    id: 3,
+    url: "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1565689157206-0fddef7589a2?w=400&q=80",
+    alt: "Engine diagnostics equipment",
+    category: "Diagnostics",
+  },
+  {
+    id: 4,
+    url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
+    alt: "Oil change service",
+    category: "Service",
+  },
+  {
+    id: 5,
+    url: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=400&q=80",
+    alt: "Professional car detailing",
+    category: "Detailing",
+  },
+  {
+    id: 6,
+    url: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&q=80",
+    alt: "Battery service and replacement",
+    category: "Service",
+  },
+  {
+    id: 7,
+    url: "https://images.unsplash.com/photo-1594736797933-d0401ba2b65a?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1594736797933-d0401ba2b65a?w=400&q=80",
+    alt: "Tyre and wheel service",
+    category: "Tyres",
+  },
+  {
+    id: 8,
+    url: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400&q=80",
+    alt: "AC and cooling system service",
+    category: "AC",
+  },
+  {
+    id: 9,
+    url: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80",
+    alt: "Sports car in workshop",
+    category: "Garage",
+  },
+  {
+    id: 10,
+    url: "https://images.unsplash.com/photo-1504222490345-c075b6008014?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1504222490345-c075b6008014?w=400&q=80",
+    alt: "Mechanic inspecting engine",
+    category: "Workshop",
+  },
+  {
+    id: 11,
+    url: "https://images.unsplash.com/photo-1548032885-b5e38734eca2?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1548032885-b5e38734eca2?w=400&q=80",
+    alt: "Luxury car service",
+    category: "Garage",
+  },
+  {
+    id: 12,
+    url: "https://images.unsplash.com/photo-1581650107963-3e8c1f48241b?w=800&q=80",
+    thumb: "https://images.unsplash.com/photo-1581650107963-3e8c1f48241b?w=400&q=80",
+    alt: "Automotive workshop interior",
+    category: "Workshop",
+  },
+];
+
+export const galleryCategories = ["All", "Garage", "Workshop", "Service", "Detailing", "Diagnostics", "Tyres", "AC"];
