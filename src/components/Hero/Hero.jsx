@@ -29,7 +29,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-sm font-semibold mb-8">
             <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-            Premium Automotive Service — Gurugram & NCR
+            Premium Automotive Service — Madhubani, Bihar
           </div>
 
           {/* Headline */}
