@@ -6,6 +6,7 @@ import {
   Gauge, DollarSign, Cpu, HeadphonesIcon, ArrowRight
 } from 'lucide-react';
 import Hero from '../../components/Hero/Hero';
+import SEO from '../../components/SEO/SEO';
 import { services } from '../../data/services';
 import { testimonials } from '../../data/testimonials';
 import { businessInfo } from '../../data/businessInfo';
@@ -100,6 +101,11 @@ const TestimonialCard = ({ testimonial }) => {
 const Home = () => {
   return (
     <div>
+      <SEO
+        title="Bombay Motors — Multi Car Repair and Service | Madhubani, Bihar"
+        description="Bombay Motors is a trusted multi-brand car repair and service centre in Madhubani, Bihar. Expert technicians, transparent pricing, all makes & models. Book today."
+        canonical="/"
+      />
       {/* 1. Hero */}
       <Hero />
 
@@ -141,7 +147,7 @@ const Home = () => {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1504222490345-c075b6008014?w=800&q=80"
-                  alt="AutoCraft Garage workshop"
+                  alt="Bombay Motors multi-brand workshop"
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
@@ -160,7 +166,7 @@ const Home = () => {
                 Your Trusted Partner <br />for <span className="text-orange-500">Every Journey</span>
               </h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                AutoCraft Garage has been serving the Gurugram and NCR community for over a decade. What started as a small workshop has grown into a full-service automotive centre trusted by thousands of vehicle owners.
+                Bombay Motors has been serving Madhubani and the surrounding Bihar community for over a decade. What started as a small workshop has grown into a full-service multi-brand automotive centre trusted by thousands of vehicle owners.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
                 Our team of certified technicians is dedicated to delivering honest, high-quality service using the latest diagnostic equipment and genuine parts. We treat every vehicle as if it were our own.
@@ -191,9 +197,9 @@ const Home = () => {
       <section className="py-24 bg-garage-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-3">Why AutoCraft</p>
+            <p className="text-orange-500 text-sm font-semibold uppercase tracking-widest mb-3">Why Bombay Motors</p>
             <h2 className="text-3xl md:text-4xl font-black text-white">
-              The AutoCraft <span className="text-orange-500">Difference</span>
+              The Bombay Motors <span className="text-orange-500">Difference</span>
             </h2>
             <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
               We combine technical expertise with genuine customer care to give you an automotive service experience that builds lasting trust.
@@ -270,7 +276,7 @@ const Home = () => {
             Ready to Book Your <span className="text-orange-500">Service?</span>
           </h2>
           <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-            Don't wait for a breakdown. Keep your vehicle in peak condition with AutoCraft's professional service. Book online in minutes.
+            Don't wait for a breakdown. Keep your vehicle in peak condition with Bombay Motors' professional service. Book online in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

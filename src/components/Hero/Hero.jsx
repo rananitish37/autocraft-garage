@@ -4,8 +4,8 @@ import { Shield, Clock, Wrench, Star } from 'lucide-react';
 import { businessInfo } from '../../data/businessInfo';
 
 const infoCards = [
-  { icon: Shield, label: 'Certified Technicians', desc: 'ASE certified mechanics' },
-  { icon: Wrench, label: 'Modern Equipment', desc: 'State-of-the-art tools' },
+  { icon: Shield, label: 'Certified Technicians', desc: 'Multi-brand specialists' },
+  { icon: Wrench, label: 'All Makes & Models', desc: 'Maruti, Hyundai, Tata & more' },
   { icon: Clock, label: 'On-Time Delivery', desc: 'We respect your schedule' },
   { icon: Star, label: '4.8 / 5 Rating', desc: '2000+ happy customers' },
 ];
@@ -17,30 +17,42 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=90"
-          alt="Professional automotive garage"
+          alt="Bombay Motors professional automotive garage"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-black/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-garage-950 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-0 lg:pb-0">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-sm font-semibold mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-sm font-semibold mb-6">
             <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-            Premium Automotive Service — Madhubani, Bihar
+            Multi-Brand Car Service — {businessInfo.city}, {businessInfo.state}
+          </div>
+
+          {/* Brand Name */}
+          <div className="mb-4">
+            <h2 className="text-orange-500 font-black text-4xl md:text-5xl tracking-widest uppercase leading-none">
+              BOMBAY MOTORS
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base tracking-[0.25em] uppercase font-medium mt-1">
+              Multi Car Repair and Service
+            </p>
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.05] tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.05] tracking-tight">
             Reliable Car Care.{' '}
             <br className="hidden sm:block" />
             <span className="text-orange-500">Done Right.</span>
           </h1>
 
           <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
-            Professional automotive service and repair you can trust. Serving Gurugram and NCR for over {businessInfo.stats[0].value} with certified technicians and transparent pricing.
+            {businessInfo.heroSubtext}
           </p>
 
           {/* Stats strip */}
@@ -76,7 +88,7 @@ const Hero = () => {
                 key={label}
                 className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col items-start gap-2 hover:border-orange-500/40 transition-colors"
               >
-                <Icon className="w-6 h-6 text-orange-500" />
+                <Icon className="w-6 h-6 text-orange-500" aria-hidden="true" />
                 <div>
                   <p className="text-white text-sm font-semibold leading-tight">{label}</p>
                   <p className="text-gray-400 text-xs mt-0.5">{desc}</p>

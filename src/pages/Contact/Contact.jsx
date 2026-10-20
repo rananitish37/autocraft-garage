@@ -4,6 +4,7 @@ import {
   MapPin, Phone, Mail, Clock, MessageSquare,
   CheckCircle, Send, AlertCircle, User, ChevronRight, ExternalLink
 } from 'lucide-react';
+import SEO from '../../components/SEO/SEO';
 import { businessInfo } from '../../data/businessInfo';
 
 const subjects = [
@@ -48,7 +49,14 @@ const Contact = () => {
   const inputBase = 'w-full bg-garage-800 border border-gray-700 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm transition-colors';
 
   return (
-    <div className="min-h-screen bg-garage-950">
+    <>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Bombay Motors in Madhubani, Bihar. Call us, WhatsApp, or send a message. Mon–Sat 9 AM–7 PM. Multi-brand car service and repair."
+        canonical="/contact"
+        ogImage="https://images.unsplash.com/photo-1548032885-b5e38734eca2?w=1200&q=80"
+      />
+      <div className="min-h-screen bg-garage-950">
       {/* Page Hero */}
       <div className="relative pt-32 pb-20 bg-garage-900 border-b border-gray-800">
         <div className="absolute inset-0">
@@ -269,8 +277,8 @@ const Contact = () => {
           {/* Map embed (uses placeholder for demo — replace with real embed URL) */}
           <div className="rounded-2xl overflow-hidden border border-gray-800 bg-garage-800 relative" style={{ height: '400px' }}>
             <iframe
-              title="AutoCraft Garage Location"
-              src="https://maps.google.com/maps?q=Sector+18+Gurugram+Haryana&output=embed"
+              title="Bombay Motors Location"
+              src="https://maps.google.com/maps?q=Madhubani+Bihar&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'invert(0.9) hue-rotate(180deg) saturate(0.5)' }}
@@ -280,8 +288,8 @@ const Contact = () => {
             />
             {/* Overlay brand badge */}
             <div className="absolute top-4 left-4 bg-garage-950/90 backdrop-blur-sm border border-gray-700 rounded-xl px-4 py-2">
-              <p className="text-white text-sm font-bold">AutoCraft Garage</p>
-              <p className="text-gray-400 text-xs">Sector 18, Gurugram</p>
+              <p className="text-white text-sm font-bold">Bombay Motors</p>
+              <p className="text-gray-400 text-xs">Madhubani, Bihar</p>
             </div>
           </div>
 
@@ -299,6 +307,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

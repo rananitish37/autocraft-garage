@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or future private paths
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.bombaymotors.in/sitemap.xml

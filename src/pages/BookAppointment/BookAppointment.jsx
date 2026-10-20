@@ -4,6 +4,7 @@ import {
   User, Phone, Mail, Car, Hash, Calendar, Clock, MessageSquare,
   CheckCircle, ChevronDown, AlertCircle
 } from 'lucide-react';
+import SEO from '../../components/SEO/SEO';
 import { services } from '../../data/services';
 import { businessInfo } from '../../data/businessInfo';
 
@@ -132,7 +133,14 @@ const BookAppointment = () => {
 
   // ── Form ───────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-garage-950">
+    <>
+      <SEO
+        title="Book a Service Appointment"
+        description="Book your car service appointment at Bombay Motors, Madhubani, Bihar. Choose from general service, oil change, brake service, diagnostics, AC, battery, tyres and more."
+        canonical="/book"
+        ogImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
+      />
+      <div className="min-h-screen bg-garage-950">
       {/* Page Hero */}
       <div className="relative pt-32 pb-16 bg-garage-900 border-b border-gray-800">
         <div className="absolute inset-0">
@@ -373,6 +381,7 @@ const BookAppointment = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

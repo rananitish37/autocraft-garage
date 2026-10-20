@@ -4,6 +4,7 @@ import {
   Wrench, Droplets, Shield, Activity, Wind, Zap, CircleDot, Sparkles,
   CheckCircle2, Calendar
 } from 'lucide-react';
+import SEO from '../../components/SEO/SEO';
 import { services } from '../../data/services';
 
 const iconMap = {
@@ -13,6 +14,13 @@ const iconMap = {
 
 const Services = () => {
   return (
+    <>
+      <SEO
+        title="Car Services"
+        description="Bombay Motors offers complete car services in Madhubani, Bihar — general service, oil change, brake service, engine diagnostics, AC service, battery, tyres, and detailing. All makes and models."
+        canonical="/services"
+        ogImage="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80"
+      />
     <div className="min-h-screen">
       {/* Page Hero */}
       <div className="relative pt-32 pb-20 bg-garage-900 border-b border-gray-800">
@@ -123,6 +131,7 @@ const Services = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

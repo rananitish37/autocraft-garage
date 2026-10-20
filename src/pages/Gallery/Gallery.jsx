@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import SEO from '../../components/SEO/SEO';
 import { galleryImages, galleryCategories } from '../../data/gallery';
 
 const Gallery = () => {
@@ -47,7 +48,14 @@ const Gallery = () => {
   }, [activeCategory, closeLightbox]);
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Gallery — Our Work"
+        description="Browse the Bombay Motors gallery — see our workshop, mechanics at work, engine repairs, car detailing, diagnostics and more. Quality service in Madhubani, Bihar."
+        canonical="/gallery"
+        ogImage="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200&q=80"
+      />
+      <div className="min-h-screen">
       {/* Page Hero */}
       <div className="relative pt-32 pb-20 bg-garage-900 border-b border-gray-800">
         <div className="absolute inset-0">
@@ -64,7 +72,7 @@ const Gallery = () => {
             Workshop <span className="text-orange-500">Gallery</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl">
-            A glimpse inside AutoCraft Garage — our facilities, our team, and the quality of work we deliver every day.
+            A glimpse inside Bombay Motors — our facilities, our team, and the quality multi-brand service we deliver every day.
           </p>
           <div className="flex items-center gap-3 mt-2 text-sm text-gray-500">
             <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
@@ -180,6 +188,7 @@ const Gallery = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

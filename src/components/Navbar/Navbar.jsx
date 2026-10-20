@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Settings2, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { businessInfo } from '../../data/businessInfo';
 
 const Navbar = () => {
@@ -40,13 +40,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center group-hover:bg-orange-400 transition-colors">
-              <Settings2 className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center gap-3 group" aria-label="Bombay Motors - Home">
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-black text-xl tracking-widest uppercase group-hover:text-orange-400 transition-colors">
+                BOMBAY <span className="text-orange-500">MOTORS</span>
+              </span>
+              <span className="text-gray-400 text-[10px] tracking-[0.2em] uppercase font-medium">
+                Multi Car Repair and Service
+              </span>
             </div>
-            <span className="text-white font-bold text-xl tracking-tight">
-              Auto<span className="text-orange-500">Craft</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}
