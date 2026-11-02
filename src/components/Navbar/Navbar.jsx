@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
-import { businessInfo } from '../../data/businessInfo';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +19,11 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/#about' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Reviews', path: '/#reviews' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'HOME', path: '/' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'SERVICES', path: '/services' },
+    { name: 'BUILDS', path: '/gallery' },
+    { name: 'CONTACT', path: '/contact' },
   ];
 
   const isActive = (path) => {
@@ -34,91 +32,86 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-gray-950/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-4 px-4 sm:px-6 pointer-events-none transition-all duration-300">
+      <div
+        className={`max-w-5xl mx-auto rounded-2xl transition-all duration-300 pointer-events-auto border ${
+          scrolled
+            ? 'bg-black/90 backdrop-blur-xl border-white/15 shadow-2xl py-2 px-4 sm:px-6'
+            : 'bg-black/75 backdrop-blur-md border-white/10 shadow-xl py-2.5 px-4 sm:px-6'
+        }`}
+      >
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group" aria-label="Bombay Motors - Home">
-            <div className="flex flex-col leading-none">
-              <span className="text-white font-black text-xl tracking-widest uppercase group-hover:text-orange-400 transition-colors">
-                BOMBAY <span className="text-orange-500">MOTORS</span>
+          {/* Brand Logo with User-Provided Bombay Motors Image */}
+          <Link
+            to="/"
+            className="flex items-center group select-none gap-2.5"
+            aria-label="Bombay Motors - Home"
+          >
+            <img
+              src="/images/logo.jpg"
+              alt="Bombay Motors"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-orange-500/40 shadow-md group-hover:border-orange-500 transition-colors"
+            />
+            <div className="flex flex-col">
+              <span className="text-white font-display font-black text-lg sm:text-xl tracking-wider uppercase group-hover:text-orange-400 transition-colors leading-none">
+                BOMBAY MOTORS
               </span>
-              <span className="text-gray-400 text-[10px] tracking-[0.2em] uppercase font-medium">
-                Multi Car Repair and Service
+              <span className="text-[9px] font-semibold tracking-widest text-orange-500 uppercase">
+                Multi Car Care
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(link.path)
-                    ? 'text-orange-500'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Desktop Navigation Links with Frosted Pill Active State (Reference: Sociafy Navbar) */}
+          <div className="hidden md:flex items-center gap-1.5">
+            {navLinks.map((link) => {
+              const active = isActive(link.path);
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-lg transition-all duration-200 ${
+                    active
+                      ? 'bg-white/15 text-white shadow-sm border border-white/10'
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href={`tel:${businessInfo.phone}`}
-              className="flex items-center gap-2 text-gray-300 hover:text-white text-sm transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>{businessInfo.phone}</span>
-            </a>
-            <Link
-              to="/book"
-              className="bg-orange-500 hover:bg-orange-400 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/25"
-            >
-              Book Appointment
-            </Link>
-          </div>
-
-          {/* Mobile Toggle */}
+          {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 focus:outline-none transition-colors"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-950/98 backdrop-blur-md border-t border-gray-800">
-          <div className="px-4 py-4 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="pt-3 border-t border-gray-800 mt-3">
-              <Link
-                to="/book"
-                className="block bg-orange-500 hover:bg-orange-400 text-white px-4 py-3 rounded-lg text-center font-semibold transition-colors"
-              >
-                Book Appointment
-              </Link>
-            </div>
+        {/* Mobile Drawer */}
+        {isOpen && (
+          <div className="md:hidden pt-3 pb-2 border-t border-white/10 mt-2 space-y-1">
+            {navLinks.map((link) => {
+              const active = isActive(link.path);
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`block px-3 py-2 rounded-lg text-xs font-semibold tracking-wider uppercase transition-colors ${
+                    active ? 'bg-white/15 text-white' : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };

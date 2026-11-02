@@ -22,6 +22,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        display: ['"Barlow Condensed"', 'Antonio', 'Oswald', 'sans-serif'],
+        editorial: ['Antonio', '"Barlow Condensed"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Newsreader', 'Georgia', 'serif'],
       }
     },
   },

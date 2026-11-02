@@ -11,13 +11,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Link to="/" className="flex flex-col gap-0.5 group mb-6" aria-label="Bombay Motors - Home">
-              <span className="text-white font-black text-2xl tracking-widest uppercase group-hover:text-orange-400 transition-colors">
-                BOMBAY <span className="text-orange-500">MOTORS</span>
-              </span>
-              <span className="text-gray-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-                Multi Car Repair and Service
-              </span>
+            <Link to="/" className="flex items-center gap-3 group mb-5" aria-label="Bombay Motors - Home">
+              <img
+                src="/images/logo.jpg"
+                alt="Bombay Motors"
+                className="w-11 h-11 rounded-full object-cover border border-orange-500/40 shadow-md group-hover:border-orange-500 transition-colors flex-shrink-0"
+              />
+              <div className="flex flex-col">
+                <span className="text-white font-black text-xl tracking-wider uppercase group-hover:text-orange-400 transition-colors leading-tight">
+                  BOMBAY <span className="text-orange-500">MOTORS</span>
+                </span>
+                <span className="text-gray-500 text-[9px] tracking-[0.2em] uppercase font-medium">
+                  Multi Car Repair and Service
+                </span>
+              </div>
             </Link>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
               Professional multi-brand automotive service and repair you can trust. Serving Bihar with certified technicians and transparent pricing.
@@ -40,7 +47,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li><Link to="/" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Home</Link></li>
-              <li><Link to="/#about" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">About Us</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">About Us</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Our Services</Link></li>
               <li><Link to="/gallery" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Gallery</Link></li>
               <li><Link to="/book" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Book Appointment</Link></li>

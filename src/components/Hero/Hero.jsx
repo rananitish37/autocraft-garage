@@ -1,104 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Clock, Wrench, Star } from 'lucide-react';
-import { businessInfo } from '../../data/businessInfo';
-
-const infoCards = [
-  { icon: Shield, label: 'Certified Technicians', desc: 'Multi-brand specialists' },
-  { icon: Wrench, label: 'All Makes & Models', desc: 'Maruti, Hyundai, Tata & more' },
-  { icon: Clock, label: 'On-Time Delivery', desc: 'We respect your schedule' },
-  { icon: Star, label: '4.8 / 5 Rating', desc: '2000+ happy customers' },
-];
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center">
-      {/* Background */}
+    <section className="relative min-h-screen flex items-center">
+      {/* Background — Preserved exactly as requested */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=90"
-          alt="Bombay Motors professional automotive garage"
+          alt="Stage & Garage automotive performance"
           className="w-full h-full object-cover"
           loading="eager"
           fetchpriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-garage-950 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-0 lg:pb-0">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-sm font-semibold mb-6">
-            <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-            Multi-Brand Car Service — {businessInfo.city}, {businessInfo.state}
+      {/* Hero Content aligned to reference design */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28">
+        <div className="max-w-4xl">
+          {/* Eyebrow / Category Tag */}
+          <div className="flex items-center gap-3 mb-5 sm:mb-6">
+            <span className="w-8 sm:w-10 h-[2px] bg-orange-500 inline-block" />
+            <span className="text-orange-500 font-bold text-xs sm:text-sm tracking-[0.25em] uppercase">
+              PERFORMANCE AUTHORITY
+            </span>
           </div>
 
-          {/* Brand Name */}
-          <div className="mb-4">
-            <h2 className="text-orange-500 font-black text-4xl md:text-5xl tracking-widest uppercase leading-none">
-              BOMBAY MOTORS
-            </h2>
-            <p className="text-gray-300 text-sm md:text-base tracking-[0.25em] uppercase font-medium mt-1">
-              Multi Car Repair and Service
-            </p>
-          </div>
-
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.05] tracking-tight">
-            Reliable Car Care.{' '}
-            <br className="hidden sm:block" />
-            <span className="text-orange-500">Done Right.</span>
+          {/* High-Impact Condensed Headline - Refined Boldness & Size */}
+          <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white uppercase tracking-tight leading-[0.98] mb-5 sm:mb-6">
+            BUILT IN THE GARAGE.<br />
+            PROVEN ON THE STAGE.
           </h1>
 
-          <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
-            {businessInfo.heroSubtext}
+          {/* Clean Sub-paragraph */}
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-xl font-normal leading-relaxed mb-8 sm:mb-10 text-pretty">
+            We engineer automotive masterpieces for those who demand uncompromising performance
+            and world-class aesthetics. From track-ready builds to show-stopping restorations.
           </p>
 
-          {/* Stats strip */}
-          <div className="flex flex-wrap gap-6 mb-10">
-            {businessInfo.stats.map((stat, i) => (
-              <div key={i} className="flex items-baseline gap-1.5">
-                <span className="text-2xl font-black text-orange-500">{stat.value}</span>
-                <span className="text-gray-400 text-sm">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          {/* Dual Action CTAs */}
+          <div className="flex flex-wrap items-center gap-4">
             <Link
-              to="/book"
-              className="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-white rounded-xl font-bold text-lg text-center transition-all duration-200 hover:shadow-[0_0_30px_rgba(249,115,22,0.35)] hover:-translate-y-0.5"
+              to="/gallery"
+              className="px-8 py-3.5 sm:py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm tracking-widest uppercase transition-all duration-200 shadow-lg hover:shadow-orange-500/30 rounded-sm inline-flex items-center justify-center"
             >
-              Book Appointment
+              VIEW PORTFOLIO
             </Link>
             <Link
-              to="/contact"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white rounded-xl font-bold text-lg text-center transition-all duration-200 backdrop-blur-sm"
+              to="/services"
+              className="px-8 py-3.5 sm:py-4 bg-black/40 hover:bg-white/10 border border-white/50 hover:border-orange-500 text-white hover:text-orange-400 font-bold text-xs sm:text-sm tracking-widest uppercase transition-all duration-200 backdrop-blur-sm rounded-sm inline-flex items-center justify-center"
             >
-              Contact Us
+              OUR SERVICES
             </Link>
-          </div>
-
-          {/* Quick Info Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {infoCards.map(({ icon: Icon, label, desc }) => (
-              <div
-                key={label}
-                className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col items-start gap-2 hover:border-orange-500/40 transition-colors"
-              >
-                <Icon className="w-6 h-6 text-orange-500" aria-hidden="true" />
-                <div>
-                  <p className="text-white text-sm font-semibold leading-tight">{label}</p>
-                  <p className="text-gray-400 text-xs mt-0.5">{desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

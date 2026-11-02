@@ -10,6 +10,7 @@ import Services from './pages/Services/Services';
 import Gallery from './pages/Gallery/Gallery';
 import BookAppointment from './pages/BookAppointment/BookAppointment';
 import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
 import NotFound from './pages/NotFound/NotFound';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <main id="main-content" className="flex-grow">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/book" element={<BookAppointment />} />
