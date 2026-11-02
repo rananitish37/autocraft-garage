@@ -57,7 +57,7 @@ const Navbar = () => {
                 BOMBAY MOTORS
               </span>
               <span className="text-[9px] font-semibold tracking-widest text-orange-500 uppercase">
-                Multi Car Care
+                Multi Car Repair and Service
               </span>
             </div>
           </Link>
