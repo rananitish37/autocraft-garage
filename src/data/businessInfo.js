@@ -12,7 +12,7 @@ export const businessInfo = {
   state: "Bihar",
   country: "India",
   postalCode: "847211",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Madhubani+Bihar&output=embed",
+  mapEmbedUrl: "https://maps.app.goo.gl/6eMbyuHVJo5g3UtQ7?g_st=awb",
   website: "https://www.bombaymotors.in",
   hours: {
     weekdays: "Monday – Saturday: 9:00 AM – 7:00 PM",
