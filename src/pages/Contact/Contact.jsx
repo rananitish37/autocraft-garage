@@ -250,7 +250,7 @@ const Contact = () => {
                 <h2 className="text-2xl font-bold text-white">Find Us on the Map</h2>
               </div>
               <a
-                href={`https://maps.google.com?q=${encodeURIComponent(businessInfo.address)}`}
+                href="https://maps.app.goo.gl/6eMbyuHVJo5g3UtQ7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors"
