@@ -21,7 +21,7 @@ export const businessInfo = {
   social: {
     instagram: "https://instagram.com/bombaymotors",
     facebook: "https://facebook.com/bombaymotors",
-    whatsapp: "https://wa.me/8655471809?text=Hi%2C%20I%20want%20to%20book%20a%20service%20at%20Bombay%20Motors.",
+    whatsapp: "https://wa.me/7208690136?text=Hi%2C%20I%20want%20to%20book%20a%20service%20at%20Bombay%20Motors.",
   },
   stats: [
     { value: "10+", label: "Years Experience" },
