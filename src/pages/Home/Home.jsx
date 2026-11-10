@@ -114,7 +114,7 @@ const Home = () => {
   return (
     <div>
       <SEO
-        title="Stage & Garage — Automotive Performance & Engineering"
+        title="Bombay Motors | Multi-Brand Car Service"
         description="Bespoke multi-brand performance tuning, custom builds, paint, bodywork, and diagnostic engineering."
         canonical="/"
       />

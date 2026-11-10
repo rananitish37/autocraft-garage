@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://www.bombaymotors.in/sitemap.xml
+Sitemap: https://www.bombay-motors.com/sitemap.xml

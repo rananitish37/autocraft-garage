@@ -13,7 +13,7 @@ export const businessInfo = {
   country: "India",
   postalCode: "847103",
   mapEmbedUrl: "https://maps.google.com/maps?q=26.076744,86.131850&z=15&output=embed",
-  website: "https://www.bombaymotors.in",
+  website: "https://www.bombay-motors.com",
   hours: {
     weekdays: "Monday – Sunday: 9:00 AM – 7:00 PM",
     // weekend: "Sunday: Closed",
